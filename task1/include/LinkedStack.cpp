@@ -16,4 +16,11 @@ public:
 		}
 		return false;
 	}
+
+	void push(T data) {
+		ListNode<T>* newOne = new ListNode(data);
+		newOne->next = top;
+		top = newOne;
+	}
+
 };
