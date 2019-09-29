@@ -9,4 +9,11 @@ public:
 	LinkedStack() {
 		this->top = nullptr;
 	}
+
+	bool isEmpty() {
+		if (top == nullptr) {
+			return true;
+		}
+		return false;
+	}
 };
