@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\LinkedStack.cpp" />
     <ClCompile Include="include\ListNode.cpp" />
     <ClCompile Include="include\Stack.cpp" />
     <ClCompile Include="task1.cpp" />
