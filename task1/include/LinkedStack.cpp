@@ -18,9 +18,19 @@ public:
 	}
 
 	void push(T data) override {
-		ListNode<T>* newOne = new ListNode(data);
-		newOne->next = top;
-		top = newOne;
+		ListNode<T>* newNode = new ListNode(data);
+		newNode->next = top;
+		top = newNode;
 	}
 
+	T pop() override {
+		if (isEmpty()) {
+			throw std::logic_error("attempt to pop from an empty stack");
+		}
+		T result = top->data;
+		ListNode<T>* toDelete = top;
+		top = top->next;
+		delete toDelete;
+		return result;
+	}
 };
