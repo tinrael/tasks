@@ -17,7 +17,7 @@ public:
 		return false;
 	}
 
-	void push(T data) {
+	void push(T data) override {
 		ListNode<T>* newOne = new ListNode(data);
 		newOne->next = top;
 		top = newOne;
