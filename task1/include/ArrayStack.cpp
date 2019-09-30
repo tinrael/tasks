@@ -1,3 +1,4 @@
+#include <stdexcept>
 #include "Stack.cpp"
 
 template<typename T>
