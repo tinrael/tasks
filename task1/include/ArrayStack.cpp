@@ -14,7 +14,7 @@ private:
 		for (int i = 0; i < size; i++) {
 			newItems[i] = items[i];
 		}
-		delete[] items;
+		delete [] items;
 		items = newItems;
 	}
 public:
@@ -25,7 +25,7 @@ public:
 	}
 
 	~ArrayStack() {
-		delete[] items;
+		delete [] items;
 	}
 
 	bool isEmpty() {
@@ -35,7 +35,7 @@ public:
 		return false;
 	}
 
-	void push(T data) {
+	void push(T data) override {
 		if (size == capacity) {
 			growCapacity();
 		}
