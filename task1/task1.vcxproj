@@ -154,6 +154,7 @@
     <ClCompile Include="include\ArrayStack.cpp" />
     <ClCompile Include="include\LinkedStack.cpp" />
     <ClCompile Include="include\ListNode.cpp" />
+    <ClCompile Include="include\Queue.cpp" />
     <ClCompile Include="include\Stack.cpp" />
     <ClCompile Include="task1.cpp" />
   </ItemGroup>
