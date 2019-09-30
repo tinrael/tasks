@@ -11,6 +11,16 @@ public:
 		this->top = nullptr;
 	}
 
+	~LinkedStack() {
+		ListNode<T>* current = top;
+		ListNode<T>* toDelete;
+		while (current) {
+			toDelete = current;
+			current = current->next;
+			delete toDelete;
+		}
+	}
+
 	bool isEmpty() {
 		if (top == nullptr) {
 			return true;
