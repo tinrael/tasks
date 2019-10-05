@@ -9,8 +9,8 @@ private:
 	ListNode<T>* head;
 public:
 	LinkedQueue() {
-		head = nullptr;
-		tail = nullptr;
+		this->head = nullptr;
+		this->tail = nullptr;
 	}
 
 	~LinkedQueue() {
