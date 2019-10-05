@@ -5,8 +5,8 @@
 template<typename T>
 class LinkedQueue : public Queue<T> {
 private:
-	ListNode<T>* tail;
 	ListNode<T>* head;
+	ListNode<T>* tail;	
 public:
 	LinkedQueue() {
 		this->head = nullptr;
@@ -25,7 +25,7 @@ public:
 	}
 
 	void enQueue(T data) override {
-		ListNode<T>* newNode = ListNode<T>(data);
+		ListNode<T>* newNode = new ListNode<T>(data);
 		if (isEmpty()) {
 			head = newNode;
 			tail = newNode;
