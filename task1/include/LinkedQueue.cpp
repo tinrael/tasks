@@ -44,6 +44,7 @@ public:
 		ListNode<T>* toDelete = head;
 		head = head->next;
 		delete toDelete;
+		// if it is the last node, tail will point to freed memory
 		if (head == nullptr) {
 			tail = nullptr;
 		}
