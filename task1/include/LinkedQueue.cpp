@@ -14,7 +14,13 @@ public:
 	}
 
 	~LinkedQueue() {
-		// TODO: delete queue
+		ListNode<T>* current = head;
+		ListNode<T>* toDelete;
+		while (current) {
+			toDelete = current;
+			current = current->next;
+			delete toDelete;
+		}
 	}
 
 	bool isEmpty() {
