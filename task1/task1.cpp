@@ -1,11 +1,28 @@
 ﻿// task1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
+#include "include/ArrayQueue.cpp"
 #include <iostream>
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	Queue<int>* myQueue = new ArrayQueue<int>();
+	myQueue->enqueue(1);
+	myQueue->enqueue(2);
+	myQueue->enqueue(3);
+	std::cout << myQueue->dequeue() << std::endl;
+	myQueue->enqueue(4);
+	myQueue->enqueue(5);
+	std::cout << myQueue->dequeue() << std::endl;
+	myQueue->enqueue(6);
+	myQueue->enqueue(7);
+	std::cout << myQueue->dequeue() << std::endl;
+	std::cout << myQueue->dequeue() << std::endl;
+	std::cout << myQueue->dequeue() << std::endl;
+	std::cout << myQueue->dequeue() << std::endl;
+	std::cout << myQueue->dequeue() << std::endl;
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

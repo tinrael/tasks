@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\ArrayQueue.cpp" />
     <ClCompile Include="include\ArrayStack.cpp" />
     <ClCompile Include="include\LinkedQueue.cpp" />
     <ClCompile Include="include\LinkedStack.cpp" />
