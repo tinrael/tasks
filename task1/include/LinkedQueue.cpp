@@ -1,6 +1,6 @@
-#include <stdexcept>
 #include "Queue.cpp"
 #include "ListNode.cpp"
+#include <stdexcept>
 
 template<typename T>
 class LinkedQueue : public Queue<T> {

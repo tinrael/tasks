@@ -1,6 +1,6 @@
-#include <stdexcept>
 #include "Stack.cpp"
 #include "ListNode.cpp"
+#include <stdexcept>
 
 template<typename T>
 class LinkedStack : public Stack<T> {

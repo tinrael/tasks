@@ -1,5 +1,5 @@
-#include <stdexcept>
 #include "Stack.cpp"
+#include <stdexcept>
 
 template<typename T>
 class ArrayStack : public Stack<T> {
