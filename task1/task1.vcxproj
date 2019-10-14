@@ -160,6 +160,9 @@
     <ClCompile Include="include\Stack.cpp" />
     <ClCompile Include="task1.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ArrayQueue.hxx" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
