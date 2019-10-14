@@ -30,9 +30,6 @@
     <ClCompile Include="include\ArrayStack.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="include\Queue.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="include\LinkedQueue.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -41,7 +38,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\ListNode.hxx">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LinkedQueue.hxx">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
     <ClInclude Include="include\ArrayQueue.hxx">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Queue.hxx">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

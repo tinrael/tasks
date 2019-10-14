@@ -156,12 +156,14 @@
     <ClCompile Include="include\LinkedQueue.cpp" />
     <ClCompile Include="include\LinkedStack.cpp" />
     <ClCompile Include="include\ListNode.cpp" />
-    <ClCompile Include="include\Queue.cpp" />
     <ClCompile Include="include\Stack.cpp" />
     <ClCompile Include="task1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ArrayQueue.hxx" />
+    <ClInclude Include="include\LinkedQueue.hxx" />
+    <ClInclude Include="include\ListNode.hxx" />
+    <ClInclude Include="include\Queue.hxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
