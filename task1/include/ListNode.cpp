@@ -1,13 +1,10 @@
-template<typename T>
-class ListNode {
-public:
-	T data;
-	ListNode<T>* next;
-	ListNode<T>* prev;
+#pragma once
 
-	ListNode(T data) {
-		this->data = data;
-		this->next = nullptr;
-		this->prev = nullptr;
-	}
-};
+#include "ListNode.hxx"
+
+template<typename T>
+ListNode<T>::ListNode(T data) {
+	this->data = data;
+	this->next = nullptr;
+	this->prev = nullptr;
+}
