@@ -1,4 +1,4 @@
-﻿#include "include/ArrayQueue.hxx"
+﻿#include "include/ArrayQueue.h"
 #include <iostream>
 
 int main()

@@ -151,19 +151,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="include\ArrayQueue.cpp" />
+    <ClCompile Include="include\ArrayQueue.hxx" />
     <ClCompile Include="include\ArrayStack.cpp" />
-    <ClCompile Include="include\LinkedQueue.cpp" />
+    <ClCompile Include="include\LinkedQueue.hxx" />
     <ClCompile Include="include\LinkedStack.cpp" />
-    <ClCompile Include="include\ListNode.cpp" />
+    <ClCompile Include="include\ListNode.hxx" />
     <ClCompile Include="include\Stack.cpp" />
     <ClCompile Include="task1.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\ArrayQueue.hxx" />
-    <ClInclude Include="include\LinkedQueue.hxx" />
-    <ClInclude Include="include\ListNode.hxx" />
-    <ClInclude Include="include\Queue.hxx" />
+    <ClInclude Include="include\ArrayQueue.h" />
+    <ClInclude Include="include\LinkedQueue.h" />
+    <ClInclude Include="include\ListNode.h" />
+    <ClInclude Include="include\Queue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,27 +1,60 @@
-#pragma once
-
-#include "Queue.hxx"
+#include "ArrayQueue.h"
+#include <stdexcept>
 
 template<typename T>
-class ArrayQueue : public Queue<T> {
-private:
-	int head;
-	int tail;
-	int capacity;
-	T* items;
-	const int INITIAL_CAPACITY = 4;
+void ArrayQueue<T>::growCapacity() {
+	int count = size();
+	int oldCapacity = capacity;
+	capacity *= 2;
+	T* newItems = new T[capacity];
+	for (int i = 0; i < count; i++) {
+		newItems[i] = items[head];
+		head = (head + 1) % oldCapacity;
+	}
+	head = 0;
+	tail = count;
+	delete[] items;
+	items = newItems;		
+}
 
-	void growCapacity();
-public:
-	ArrayQueue();
+template<typename T>
+ArrayQueue<T>::ArrayQueue() {
+	head = 0;
+	tail = 0;
+	items = new T[INITIAL_CAPACITY];
+	capacity = INITIAL_CAPACITY;	
+}
 
-	~ArrayQueue();
+template<typename T>
+ArrayQueue<T>::~ArrayQueue() {
+	delete[] items;
+}
 
-	bool isEmpty();
+template<typename T>
+bool ArrayQueue<T>::isEmpty() {
+	return head == tail;
+}
 
-	int size();
+template<typename T>
+int ArrayQueue<T>::size() {
+	return (tail + capacity - head) % capacity;
+}
 
-	void enqueue(T data) override;
+template<typename T>
+void ArrayQueue<T>::enqueue(T data) {
+	if (size() == capacity - 1) {
+		growCapacity();
+	}
+	items[tail] = data;
+	tail = (tail + 1) % capacity;
+}
 
-	T dequeue() override;
-};
+template<typename T>
+T ArrayQueue<T>::dequeue() {
+	if (isEmpty()) {
+		throw std::logic_error("attempt to dequeue from an empty queue");
+	}
+	T result = items[head];
+	head = (head + 1) % capacity;
+	return result;
+}

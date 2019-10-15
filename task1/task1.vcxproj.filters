@@ -21,33 +21,33 @@
     <ClCompile Include="include\Stack.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="include\ListNode.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="include\LinkedStack.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="include\ArrayStack.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="include\LinkedQueue.cpp">
+    <ClCompile Include="include\ListNode.hxx">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="include\ArrayQueue.cpp">
+    <ClCompile Include="include\ArrayQueue.hxx">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="include\LinkedQueue.hxx">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\ListNode.hxx">
+    <ClInclude Include="include\Queue.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="include\LinkedQueue.hxx">
+    <ClInclude Include="include\ListNode.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="include\ArrayQueue.hxx">
+    <ClInclude Include="include\ArrayQueue.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="include\Queue.hxx">
+    <ClInclude Include="include\LinkedQueue.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
