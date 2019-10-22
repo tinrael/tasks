@@ -15,9 +15,9 @@ public:
 
 	bool isEmpty();
 
-	void enQueue(T data) override;
+	void enqueue(T data) override;
 
-	T deQueue() override;
+	T dequeue() override;
 };
 
 #include "LinkedQueue.hxx"

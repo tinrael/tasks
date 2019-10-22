@@ -1,9 +1,10 @@
 ﻿#include "include/ArrayQueue.h"
+#include "include/LinkedQueue.h"
 #include <iostream>
 
 int main()
 {
-	Queue<int>* myQueue = new ArrayQueue<int>();
+	Queue<int>* myQueue = new LinkedQueue<int>();
 	myQueue->enqueue(1);
 	myQueue->enqueue(2);
 	myQueue->enqueue(3);

@@ -27,7 +27,7 @@ bool LinkedQueue<T>::isEmpty() {
 }
 
 template<typename T>
-void LinkedQueue<T>::enQueue(T data) {
+void LinkedQueue<T>::enqueue(T data) {
 	ListNode<T>* newNode = new ListNode<T>(data);
 	if (isEmpty()) {
 		head = newNode;
@@ -40,7 +40,7 @@ void LinkedQueue<T>::enQueue(T data) {
 }
 
 template<typename T>
-T LinkedQueue<T>::deQueue() {
+T LinkedQueue<T>::dequeue() {
 	if (isEmpty()) {
 		throw std::logic_error("attempt to dequeue from an empty queue");
 	}

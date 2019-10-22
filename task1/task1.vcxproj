@@ -151,12 +151,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="include\ArrayQueue.hxx" />
-    <ClCompile Include="include\ArrayStack.cpp" />
-    <ClCompile Include="include\LinkedQueue.hxx" />
-    <ClCompile Include="include\LinkedStack.cpp" />
-    <ClCompile Include="include\ListNode.hxx" />
-    <ClCompile Include="include\Stack.cpp" />
+    <ClInclude Include="include\ArrayQueue.hxx" />
+    <ClInclude Include="include\ArrayStack.h">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="include\ArrayStack.hxx" />
+    <ClInclude Include="include\LinkedQueue.hxx" />
+    <ClInclude Include="include\LinkedStack.h">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
+    <ClInclude Include="include\LinkedStack.hxx" />
+    <ClInclude Include="include\ListNode.hxx" />
+    <ClInclude Include="include\Stack.h">
+      <FileType>CppHeader</FileType>
+    </ClInclude>
     <ClCompile Include="task1.cpp" />
   </ItemGroup>
   <ItemGroup>
