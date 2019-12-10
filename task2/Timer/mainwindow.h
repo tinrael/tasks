@@ -21,6 +21,7 @@ private:
     Ui::MainWindow *ui;
     QTimer *timer;
     QTime time;
+    QTime nullTime;
 
 private slots:
     void updateRemainingTime();

@@ -5,7 +5,7 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow), nullTime(0, 0, 0)
 {
     ui->setupUi(this);
     timer = new QTimer(this);
@@ -22,6 +22,11 @@ void MainWindow::updateRemainingTime()
 {
     time = time.addSecs(-1);
     ui->lblRemainingTime->setText(time.toString("HH:mm:ss"));
+    if (time == nullTime) {
+        timer->stop();
+        ui->teTimeSetup->setEnabled(1);
+        ui->pbStart->setEnabled(1);
+    }
 }
 
 
