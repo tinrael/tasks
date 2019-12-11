@@ -55,8 +55,20 @@ void MainWindow::on_pbStart_clicked()
 
 void MainWindow::on_pbStop_clicked()
 {
+    timer->stop();
+
+    ui->pbStart->setEnabled(1);
+    ui->pbStop->setEnabled(0);
+}
+
+void MainWindow::on_pbReset_clicked()
+{
+    timer->stop();
+
+    ui->teTimeSetup->setEnabled(1);
     ui->pbStart->setEnabled(1);
     ui->pbStop->setEnabled(0);
 
-    timer->stop();
+    ui->lblRemainingTime->setText(nullTime.toString());
+    time = nullTime;
 }
