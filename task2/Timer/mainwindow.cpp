@@ -32,15 +32,17 @@ void MainWindow::updateRemainingTime()
     }
 }
 
-
+/* TODO: Each time after stopping the countdown, the new timeout interval is 1000,
+ * but the first timeout interval must be timer->remainingTime(), getting after the stop button clicked.
+ */
 void MainWindow::on_pbStart_clicked()
 {
     ui->pbStart->setEnabled(0);
     ui->pbStop->setEnabled(1);
 
-   /* Only if the time editor is enabled, the new time needs to set up.
+   /* Only if the time editor is enabled, the new countdown needs to set up.
     * If the editor is disabled, the stop button has pressed before,
-    * so the timer should continue the work.
+    * so the countdown should continue the work.
     */
     if (ui->teTimeSetup->isEnabled()) {
         ui->teTimeSetup->setEnabled(0);
@@ -64,11 +66,10 @@ void MainWindow::on_pbStop_clicked()
 void MainWindow::on_pbReset_clicked()
 {
     timer->stop();
+    ui->lblRemainingTime->setText(nullTime.toString());
+    time = nullTime;
 
     ui->teTimeSetup->setEnabled(1);
     ui->pbStart->setEnabled(1);
-    ui->pbStop->setEnabled(0);
-
-    ui->lblRemainingTime->setText(nullTime.toString());
-    time = nullTime;
+    ui->pbStop->setEnabled(0); 
 }
