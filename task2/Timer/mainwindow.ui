@@ -20,8 +20,8 @@
    <widget class="QLabel" name="lblRemainingTime">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>90</y>
+      <x>210</x>
+      <y>30</y>
       <width>311</width>
       <height>111</height>
      </rect>
@@ -42,8 +42,8 @@
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>300</y>
+      <x>190</x>
+      <y>370</y>
       <width>331</width>
       <height>80</height>
      </rect>
@@ -96,16 +96,13 @@
      </item>
     </layout>
    </widget>
-   <widget class="QTimeEdit" name="teTimeSetup">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
+   <widget class="QGroupBox" name="gbSettings">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>220</y>
-      <width>171</width>
-      <height>41</height>
+      <x>200</x>
+      <y>130</y>
+      <width>341</width>
+      <height>231</height>
      </rect>
     </property>
     <property name="font">
@@ -114,19 +111,89 @@
       <pointsize>12</pointsize>
      </font>
     </property>
-    <property name="buttonSymbols">
-     <enum>QAbstractSpinBox::UpDownArrows</enum>
+    <property name="title">
+     <string>Settings</string>
     </property>
-    <property name="minimumTime">
-     <time>
-      <hour>0</hour>
-      <minute>0</minute>
-      <second>1</second>
-     </time>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
-    <property name="displayFormat">
-     <string>HH:mm:ss</string>
-    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>70</y>
+       <width>211</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="formAlignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblTime">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Time:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QTimeEdit" name="teTimeSetup">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::UpDownArrows</enum>
+        </property>
+        <property name="minimumTime">
+         <time>
+          <hour>0</hour>
+          <minute>0</minute>
+          <second>1</second>
+         </time>
+        </property>
+        <property name="displayFormat">
+         <string>HH:mm:ss</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblSound">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Sound:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="cbSounds">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
