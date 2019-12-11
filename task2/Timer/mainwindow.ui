@@ -23,14 +23,15 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>190</y>
-      <width>161</width>
-      <height>31</height>
+      <x>290</x>
+      <y>260</y>
+      <width>171</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Calibri</family>
       <pointsize>12</pointsize>
      </font>
     </property>
@@ -51,11 +52,17 @@
    <widget class="QPushButton" name="pbStart">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>240</y>
-      <width>71</width>
-      <height>28</height>
+      <x>240</x>
+      <y>340</y>
+      <width>85</width>
+      <height>35</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Start</string>
@@ -64,15 +71,16 @@
    <widget class="QLabel" name="lblRemainingTime">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>70</y>
-      <width>211</width>
-      <height>101</height>
+      <x>230</x>
+      <y>130</y>
+      <width>311</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>30</pointsize>
+      <family>Calibri</family>
+      <pointsize>45</pointsize>
      </font>
     </property>
     <property name="text">
@@ -89,10 +97,16 @@
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>240</y>
-      <width>71</width>
-      <height>28</height>
+      <y>340</y>
+      <width>85</width>
+      <height>35</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Stop</string>
@@ -104,11 +118,17 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>240</y>
-      <width>71</width>
-      <height>28</height>
+      <x>440</x>
+      <y>340</y>
+      <width>85</width>
+      <height>35</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Reset</string>
