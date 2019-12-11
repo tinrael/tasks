@@ -37,6 +37,7 @@ void MainWindow::updateRemainingTime()
  */
 void MainWindow::on_pbStart_clicked()
 {
+    ui->pbStart->setText("Start");
     ui->pbStart->setEnabled(0);
     ui->pbStop->setEnabled(1);
 
@@ -59,6 +60,7 @@ void MainWindow::on_pbStop_clicked()
 {
     timer->stop();
 
+    ui->pbStart->setText("Continue");
     ui->pbStart->setEnabled(1);
     ui->pbStop->setEnabled(0);
 }
@@ -69,6 +71,7 @@ void MainWindow::on_pbReset_clicked()
     ui->lblRemainingTime->setText(nullTime.toString());
     time = nullTime;
 
+    ui->pbStart->setText("Start");
     ui->teTimeSetup->setEnabled(1);
     ui->pbStart->setEnabled(1);
     ui->pbStop->setEnabled(0); 
