@@ -22,6 +22,9 @@ private:
     QTimer *timer;
     QTime time;
     QTime nullTime;
+    QTime timeFrame; // if QTime time less than or equal to QTime timeFrame, the countdown timer becomes red
+
+    bool isCountdownTimerRed;
 
 private slots:
     void updateRemainingTime();

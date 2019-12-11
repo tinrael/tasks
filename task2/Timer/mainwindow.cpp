@@ -5,7 +5,7 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow), nullTime(0, 0, 0)
+    , ui(new Ui::MainWindow), nullTime(0, 0, 0), timeFrame(0, 0, 15), isCountdownTimerRed(false)
 {
     ui->setupUi(this);
     timer = new QTimer(this);
@@ -23,8 +23,16 @@ void MainWindow::updateRemainingTime()
     time = time.addSecs(-1);
     ui->lblRemainingTime->setText(time.toString("HH:mm:ss"));
 
+    if (time <= timeFrame && !isCountdownTimerRed) {
+        ui->lblRemainingTime->setStyleSheet("QLabel {color: red;}");
+        isCountdownTimerRed = true;
+    }
+
     if (time == nullTime) {
         timer->stop();
+
+        ui->lblRemainingTime->setStyleSheet("");
+        isCountdownTimerRed = false;
 
         ui->teTimeSetup->setEnabled(1);
         ui->pbStart->setEnabled(1);
@@ -51,6 +59,10 @@ void MainWindow::on_pbStart_clicked()
         QString remainingTime = ui->teTimeSetup->text();
         ui->lblRemainingTime->setText(remainingTime);
         time = QTime::fromString(remainingTime, "HH:mm:ss");
+        if (time <= timeFrame){
+            ui->lblRemainingTime->setStyleSheet("QLabel {color: red;}");
+            isCountdownTimerRed = true;
+        }
     }
 
     timer->start(1000);
@@ -68,11 +80,15 @@ void MainWindow::on_pbStop_clicked()
 void MainWindow::on_pbReset_clicked()
 {
     timer->stop();
-    ui->lblRemainingTime->setText(nullTime.toString());
     time = nullTime;
+
+    ui->lblRemainingTime->setText(nullTime.toString());
+    ui->lblRemainingTime->setStyleSheet("");
+    isCountdownTimerRed = false;
 
     ui->pbStart->setText("Start");
     ui->teTimeSetup->setEnabled(1);
     ui->pbStart->setEnabled(1);
-    ui->pbStop->setEnabled(0); 
+    ui->pbStop->setEnabled(0);
+
 }
