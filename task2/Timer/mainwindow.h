@@ -26,5 +26,6 @@ private:
 private slots:
     void updateRemainingTime();
     void on_pbStart_clicked();
+    void on_pbStop_clicked();
 };
 #endif // MAINWINDOW_H
