@@ -11,13 +11,19 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     timer = new QTimer(this);
+    notification = new Dialog(this);
+
     QObject::connect(timer, &QTimer::timeout, this, &MainWindow::updateRemainingTime);
+    QObject::connect(this, &MainWindow::timeIsOver, this, &MainWindow::openNotification);
+    QObject::connect(notification, &Dialog::finished, this, &MainWindow::stopPlayingSound);
+
     addSounds();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete notification;
     delete timer;
     delete player;
     delete playlist;
@@ -53,8 +59,11 @@ void MainWindow::updateRemainingTime()
 
     if (time == nullTime) {
         timer->stop();
+
         playlist->setCurrentIndex(ui->cbSounds->currentIndex());
         player->play();
+
+        emit timeIsOver();
 
         ui->lblRemainingTime->setStyleSheet("");
         isCountdownTimerRed = false;
@@ -64,6 +73,16 @@ void MainWindow::updateRemainingTime()
         ui->pbStop->setEnabled(0);
         ui->cbSounds->setEnabled(1);
     }
+}
+
+void MainWindow::openNotification()
+{
+    notification->open();
+}
+
+void MainWindow::stopPlayingSound()
+{
+    player->stop();
 }
 
 /* TODO: Each time after stopping the countdown, the new timeout interval is 1000,

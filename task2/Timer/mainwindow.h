@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "dialog.h"
 #include <QMainWindow>
 #include <QTimer>
 #include <QTime>
@@ -21,6 +22,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Dialog *notification;
     QTimer *timer;
     QTime time;
     QTime nullTime;
@@ -34,8 +36,14 @@ private:
 
 private slots:
     void updateRemainingTime();
+    void openNotification();
+    void stopPlayingSound();
+
     void on_pbStart_clicked();
     void on_pbStop_clicked();
-    void on_pbReset_clicked();
+    void on_pbReset_clicked();  
+
+signals:
+    void timeIsOver();
 };
 #endif // MAINWINDOW_H
