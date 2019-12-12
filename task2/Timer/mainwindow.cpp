@@ -58,6 +58,7 @@ void MainWindow::updateRemainingTime()
         ui->teTimeSetup->setEnabled(1);
         ui->pbStart->setEnabled(1);
         ui->pbStop->setEnabled(0);
+        ui->cbSounds->setEnabled(1);
     }
 }
 
@@ -69,6 +70,7 @@ void MainWindow::on_pbStart_clicked()
     ui->pbStart->setText("Start");
     ui->pbStart->setEnabled(0);
     ui->pbStop->setEnabled(1);
+    ui->cbSounds->setEnabled(0);
 
    /* Only if the time editor is enabled, the new countdown needs to set up.
     * If the editor is disabled, the stop button has pressed before,
@@ -111,5 +113,5 @@ void MainWindow::on_pbReset_clicked()
     ui->teTimeSetup->setEnabled(1);
     ui->pbStart->setEnabled(1);
     ui->pbStop->setEnabled(0);
-
+    ui->cbSounds->setEnabled(1);
 }
