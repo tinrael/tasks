@@ -9,9 +9,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>777</width>
-    <height>592</height>
+    <width>750</width>
+    <height>500</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>750</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Calibri</family>
+    <pointsize>10</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Timer</string>
@@ -21,7 +33,7 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>20</y>
+      <y>10</y>
       <width>311</width>
       <height>111</height>
      </rect>
@@ -43,7 +55,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>370</y>
+      <y>360</y>
       <width>331</width>
       <height>80</height>
      </rect>
@@ -100,7 +112,7 @@
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>130</y>
+      <y>120</y>
       <width>351</width>
       <height>231</height>
      </rect>
@@ -201,8 +213,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>777</width>
-     <height>26</height>
+     <width>750</width>
+     <height>27</height>
     </rect>
    </property>
   </widget>
