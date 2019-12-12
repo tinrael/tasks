@@ -30,6 +30,8 @@ private:
 
     bool isCountdownTimerRed;
 
+    void addSounds();
+
 private slots:
     void updateRemainingTime();
     void on_pbStart_clicked();

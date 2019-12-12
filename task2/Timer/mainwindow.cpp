@@ -12,11 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     timer = new QTimer(this);
     QObject::connect(timer, &QTimer::timeout, this, &MainWindow::updateRemainingTime);
-
-    playlist->addMedia(QUrl("sounds/calm.mp3"));
-    player->setPlaylist(playlist);
-    player->play();
-
+    addSounds();
 }
 
 MainWindow::~MainWindow()
@@ -25,6 +21,22 @@ MainWindow::~MainWindow()
     delete timer;
     delete player;
     delete playlist;
+}
+
+// TODO: relative path, not absolute.
+void MainWindow::addSounds()
+{
+    playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/calm.mp3"));
+    playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/cuckoo.mp3"));
+    playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/hurry.mp3"));
+    playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/signal.mp3"));
+
+    player->setPlaylist(playlist);
+
+    ui->cbSounds->addItem("Calm");
+    ui->cbSounds->addItem("Cuckoo");
+    ui->cbSounds->addItem("Hurry");
+    ui->cbSounds->addItem("Signal");
 }
 
 void MainWindow::updateRemainingTime()
