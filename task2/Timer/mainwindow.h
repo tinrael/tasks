@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QTime>
+#include <QMediaPlaylist>
+#include <QMediaPlayer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,6 +25,8 @@ private:
     QTime time;
     QTime nullTime;
     QTime timeFrame; // if QTime time less than or equal to QTime timeFrame, the countdown timer becomes red
+    QMediaPlayer* player;
+    QMediaPlaylist *playlist;
 
     bool isCountdownTimerRed;
 

@@ -2,20 +2,29 @@
 #include "ui_mainwindow.h"
 #include <QDebug>
 #include <QString>
+#include <QUrl>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow), nullTime(0, 0, 0), timeFrame(0, 0, 15), isCountdownTimerRed(false)
+    , ui(new Ui::MainWindow), nullTime(0, 0, 0), timeFrame(0, 0, 15), player(new QMediaPlayer)
+    , playlist(new QMediaPlaylist), isCountdownTimerRed(false)
 {
     ui->setupUi(this);
     timer = new QTimer(this);
     QObject::connect(timer, &QTimer::timeout, this, &MainWindow::updateRemainingTime);
+
+    playlist->addMedia(QUrl("sounds/calm.mp3"));
+    player->setPlaylist(playlist);
+    player->play();
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
     delete timer;
+    delete player;
+    delete playlist;
 }
 
 void MainWindow::updateRemainingTime()
