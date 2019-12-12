@@ -31,3 +31,9 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    sounds/calm.mp3 \
+    sounds/cuckoo.mp3 \
+    sounds/hurry.mp3 \
+    sounds/signal.mp3
