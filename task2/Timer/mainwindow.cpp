@@ -30,8 +30,10 @@ void MainWindow::addSounds()
     playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/cuckoo.mp3"));
     playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/hurry.mp3"));
     playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/signal.mp3"));
+    playlist->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
 
     player->setPlaylist(playlist);
+    player->setVolume(75);
 
     ui->cbSounds->addItem("Calm");
     ui->cbSounds->addItem("Cuckoo");
@@ -51,6 +53,8 @@ void MainWindow::updateRemainingTime()
 
     if (time == nullTime) {
         timer->stop();
+        playlist->setCurrentIndex(ui->cbSounds->currentIndex());
+        player->play();
 
         ui->lblRemainingTime->setStyleSheet("");
         isCountdownTimerRed = false;
