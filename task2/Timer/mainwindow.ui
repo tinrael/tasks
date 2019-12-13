@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>850</width>
+    <width>853</width>
     <height>643</height>
    </rect>
   </property>
@@ -225,7 +225,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QListWidget" name="lwTimers">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -234,6 +234,12 @@
       <height>541</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -241,7 +247,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>850</width>
+     <width>853</width>
      <height>26</height>
     </rect>
    </property>
