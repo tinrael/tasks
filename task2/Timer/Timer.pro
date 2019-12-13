@@ -40,3 +40,7 @@ DISTFILES += \
     sounds/cuckoo.mp3 \
     sounds/hurry.mp3 \
     sounds/signal.mp3
+
+sounds.path = $${OUT_PWD}/sounds
+sounds.files = sounds/*
+INSTALLS += sounds

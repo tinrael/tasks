@@ -29,13 +29,12 @@ MainWindow::~MainWindow()
     delete playlist;
 }
 
-// TODO: relative path, not absolute.
 void MainWindow::addSounds()
 {
-    playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/calm.mp3"));
-    playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/cuckoo.mp3"));
-    playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/hurry.mp3"));
-    playlist->addMedia(QUrl("C:/Users/TimurKrasnopir/Desktop/tasks/task2/Timer/sounds/signal.mp3"));
+    playlist->addMedia(QUrl::fromLocalFile("sounds/calm.mp3"));
+    playlist->addMedia(QUrl::fromLocalFile("sounds/cuckoo.mp3"));
+    playlist->addMedia(QUrl::fromLocalFile("sounds/hurry.mp3"));
+    playlist->addMedia(QUrl::fromLocalFile("sounds/signal.mp3"));
     playlist->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
 
     player->setPlaylist(playlist);
