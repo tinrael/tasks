@@ -1,6 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "customtimer.h"
+#include <vector>
+#include <memory>
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -17,8 +20,11 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    std::vector<std::shared_ptr<CustomTimer>> timers;
 
 private slots:
+
+    void on_pbAdd_clicked();
 
 signals:
 };
