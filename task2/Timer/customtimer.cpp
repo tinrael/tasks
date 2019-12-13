@@ -4,17 +4,24 @@
 
 CustomTimer::CustomTimer(const QTime &time, QObject *parent) : QObject(parent), timer(new QTimer), zeroTime(0, 0)
 {
-    if (time.isValid()){
-        this->time = time;
-        QObject::connect(timer, &QTimer::timeout, this, &CustomTimer::updateTime);
-    }
-    else
-        throw std::invalid_argument("The time is invalid!");
+    setTime(time);
+    QObject::connect(timer, &QTimer::timeout, this, &CustomTimer::updateTime);
 }
 
 CustomTimer::~CustomTimer()
 {
     delete timer;
+}
+
+void CustomTimer::setTime(const QTime &time)
+{
+    if (time.isValid()) {
+        if (!timer->isActive()) {
+            this->time = time;
+        } else
+            throw std::logic_error("Stop the timer before setting the time!");
+    } else
+        throw std::invalid_argument("The time is invalid!");
 }
 
 QString CustomTimer::getTime()

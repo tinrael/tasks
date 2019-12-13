@@ -18,6 +18,7 @@ public:
     explicit CustomTimer(const QTime& time, QObject *parent = nullptr);
     virtual ~CustomTimer();
 
+    void setTime(const QTime& time);
     QString getTime();
 
 signals:
