@@ -17,6 +17,11 @@ CustomTimer::~CustomTimer()
     delete timer;
 }
 
+QString CustomTimer::getTime()
+{
+    return time.toString("HH:mm:ss");
+}
+
 void CustomTimer::updateTime()
 {
     if (time == zeroTime){
@@ -29,7 +34,7 @@ void CustomTimer::updateTime()
 void CustomTimer::start()
 {
     if (time > zeroTime)
-        timer->start();
+        timer->start(1000);
 }
 
 void CustomTimer::stop()

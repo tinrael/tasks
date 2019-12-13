@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QTimer>
 #include <QTime>
+#include <QString>
 
 class CustomTimer : public QObject
 {
@@ -16,6 +17,8 @@ private:
 public:
     explicit CustomTimer(const QTime& time, QObject *parent = nullptr);
     virtual ~CustomTimer();
+
+    QString getTime();
 
 signals:
     void timeout();
