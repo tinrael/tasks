@@ -26,6 +26,9 @@ private slots:
 
     void on_pbAdd_clicked();
 
+    void on_pbDelete_clicked();
+
+
 signals:
 };
 
