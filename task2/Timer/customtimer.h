@@ -15,7 +15,7 @@ private:
     QTime zeroTime;
 
 public:
-    explicit CustomTimer(const QTime& time, QObject *parent = nullptr);
+    explicit CustomTimer(const QTime& time = QTime(0, 0), QObject *parent = nullptr);
     virtual ~CustomTimer();
 
     void setTime(const QTime& time);
