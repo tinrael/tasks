@@ -60,9 +60,12 @@
       <height>80</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="hrzltStartStopReset">
+    <layout class="QHBoxLayout" name="hrzltControlButtons">
      <item>
       <widget class="QPushButton" name="pbStart">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="font">
         <font>
          <family>Calibri</family>
@@ -93,7 +96,7 @@
      <item>
       <widget class="QPushButton" name="pbReset">
        <property name="enabled">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="font">
         <font>
