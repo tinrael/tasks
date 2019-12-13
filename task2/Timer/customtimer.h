@@ -11,16 +11,22 @@ class CustomTimer : public QObject
 private:
     QTimer *timer;
     QTime time;
+    QTime zeroTime;
 
 public:
     explicit CustomTimer(const QTime& time, QObject *parent = nullptr);
     virtual ~CustomTimer();
+
 signals:
+    void timeout();
 
 private slots:
     void updateTime();
 
-public slots:   
+public slots:
+    void start();
+    void stop();
+    void reset();
 };
 
 #endif // CUSTOMTIMER_H
